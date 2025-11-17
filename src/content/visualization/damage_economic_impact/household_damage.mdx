@@ -1,0 +1,21 @@
+
+import data from "~/constants/data/data";
+import SimpleBarChart from "~/ui/simple-bar-chart";
+import PieChartWithLabel from "~/ui/pie-chart-with-label";
+import findings from "~/constants/data/findings";
+import { Callout } from "nextra/components";
+
+# TABLE (9.40) HOUSEHOLD DAMAGE
+
+<div className={"flex flex-col lg:flex-row items-start py-6 gap-4 lg:gap-0"}>
+
+<SimpleBarChart data={data["damage_economic_impact"]["household_damage"]} />
+
+<PieChartWithLabel
+  data={data["damage_economic_impact"]["household_damage"]}
+/>
+
+</div>
+
+<Callout type={"info"}>FINDINGS: {findings["household_damage"]}</Callout>
+

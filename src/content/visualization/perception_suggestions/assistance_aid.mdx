@@ -1,0 +1,21 @@
+
+import data from "~/constants/data/data";
+import SimpleBarChart from "~/ui/simple-bar-chart";
+import PieChartWithLabel from "~/ui/pie-chart-with-label";
+import findings from "~/constants/data/findings";
+import { Callout } from "nextra/components";
+
+# TABLE (8.37) ASSISTANCE AID
+
+<div className={"flex flex-col lg:flex-row items-start py-6 gap-4 lg:gap-0"}>
+
+<SimpleBarChart data={data["perception_suggestions"]["assistance_aid"]} />
+
+<PieChartWithLabel
+  data={data["perception_suggestions"]["assistance_aid"]}
+/>
+
+</div>
+
+<Callout type={"info"}>FINDINGS: {findings["assistance_aid"]}</Callout>
+

@@ -1,0 +1,61 @@
+"use client";
+
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Rectangle,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
+
+export type SimpleBarChartData = {
+  value: string | number;
+  frequency: string | number;
+};
+
+const COLORS = [
+  "#0088FE", // bright blue
+  "#00C49F", // teal
+  "#FFBB28", // golden yellow
+  "#FF8042", // orange
+  "#A28EFF", // lavender purple
+  "#FF6699", // pink
+  "#33CC33", // green
+  "#996633", // brown
+  "#FF3333", // red
+  "#66CCCC", // aqua
+];
+
+export default function SimpleBarChart({ data }: { data: SimpleBarChartData }) {
+  return (
+    <BarChart
+      className="w-full"
+      style={{
+        aspectRatio: 1,
+        width: "100%",
+        height: "100vh",
+      }}
+      responsive
+      data={data as unknown as any[]}
+    >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis
+        dataKey="value"
+        interval="preserveStartEnd"
+        height={200}
+        angle={-45}
+        textAnchor="end"
+      />
+      <YAxis dataKey={"frequency"} />
+      <Tooltip />
+      <Bar
+        dataKey="frequency"
+        fill="#0b0bbcff"
+        label={{ position: "top" }}
+        activeBar={<Rectangle fill="#0404e7ff" stroke="blue" />}
+      />
+    </BarChart>
+  );
+}

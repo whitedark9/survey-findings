@@ -1,0 +1,21 @@
+
+import data from "~/constants/data/data";
+import SimpleBarChart from "~/ui/simple-bar-chart";
+import PieChartWithLabel from "~/ui/pie-chart-with-label";
+import findings from "~/constants/data/findings";
+import { Callout } from "nextra/components";
+
+# TABLE (1.3) GENDER
+
+<div className={"flex flex-col lg:flex-row items-start py-6 gap-4 lg:gap-0"}>
+
+<SimpleBarChart data={data["household_identification"]["gender"]} />
+
+<PieChartWithLabel
+  data={data["household_identification"]["gender"]}
+/>
+
+</div>
+
+<Callout type={"info"}>FINDINGS: {findings["gender"]}</Callout>
+
