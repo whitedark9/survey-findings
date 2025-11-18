@@ -1,60 +1,11 @@
-import data from "~/constants/data/data";
-import findings from "~/constants/data/findings";
+import { data } from "~/constants/data";
 import { Callout } from "nextra/components";
 import clsx from "clsx";
+import TableWithTitle from "~/ui/table-with-title";
 
-{Object.keys(data).map((key, index) => {
+# Survey Finding Tables
 
-let i = 0;
-
+{Object.keys(data).map((key, index)=> {
 return (
 
-  <div key={key} className="pb-6 border-b-1 mb-6">
-
-<h2 className="mb-3 text-xl font-bold">
-  {index + 1}. {key.toUpperCase().replaceAll("_", " ")}
-</h2>
-
-{
-Object.keys(data[key]).map((table_title, idx)=> {
-
-    if (Array.isArray(data[key][table_title])) {
-      i++;
-
-      return (
-        <div key={table_title} className="mb-6 p-3">
-          <h3 className="text-lg mb-3 font-bold capitalize">table {index+1}.{i} {table_title.replaceAll("_", " ")}</h3>
-
-          <table className="w-full text-center border">
-            <thead>
-            <tr className="text-bold">
-              <th>Name</th>
-              <th>Frequency</th>
-              <th>Percent</th>
-            </tr>
-            </thead>
-            <tbody>
-              {data[key][table_title].map((e, i)=> (
-                <tr key={e.value} className={clsx("border-t-1", i === data[key][table_title].length && 'border-b-1')}>
-                  <td>{e.value.toString().replaceAll("_", " ")}</td>
-                  <td>{e.frequency}</td>
-                  <td>{e.percent}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-
-          <Callout type={"info"}>
-            FINDINGS: {findings[table_title]}
-          </Callout>
-        </div>
-      )
-
-    }
-
-})
-}
-
-</div>
-)
-})}
+<TableWithTitle key={key} data={data[key]} index={index} />) })}

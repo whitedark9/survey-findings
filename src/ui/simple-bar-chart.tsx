@@ -9,11 +9,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-
-export type SimpleBarChartData = {
-  value: string | number;
-  frequency: string | number;
-};
+import { ReChartData } from "~/constants/types/data";
 
 const COLORS = [
   "#0088FE", // bright blue
@@ -28,13 +24,12 @@ const COLORS = [
   "#66CCCC", // aqua
 ];
 
-export default function SimpleBarChart({ data }: { data: SimpleBarChartData }) {
+export default function SimpleBarChart({ data }: { data: ReChartData[] }) {
   return (
     <BarChart
-      className="w-full"
+      className="mx-auto w-full"
       style={{
         aspectRatio: 1,
-        width: "100%",
         height: "80vh",
       }}
       responsive
@@ -42,7 +37,7 @@ export default function SimpleBarChart({ data }: { data: SimpleBarChartData }) {
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis
-        dataKey="value"
+        dataKey="x"
         interval="preserveStartEnd"
         height={200}
         angle={-45}

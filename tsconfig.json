@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/content/pharmacology/index.mdx",
-    "src/content/index.mdx"
+    "src/content/index.mdx",
+    "src/constants/data/data.mjs"
   ],
   "exclude": ["node_modules"]
 }
