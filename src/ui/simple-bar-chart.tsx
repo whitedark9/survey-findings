@@ -35,7 +35,7 @@ export default function SimpleBarChart({ data }: { data: SimpleBarChartData }) {
       style={{
         aspectRatio: 1,
         width: "100%",
-        height: "100vh",
+        height: "80vh",
       }}
       responsive
       data={data as unknown as any[]}
