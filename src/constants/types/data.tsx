@@ -13,7 +13,7 @@ export type Section =
 
 export type TableData = {
   headers: string[];
-  body: any[];
+  body: ReChartData[];
 };
 
 export type SurveyData = {

@@ -20,12 +20,13 @@ export default function SurveyFinding({
   hideTitle?: boolean;
 }) {
   return (
-    <div className={clsx("mt-6 mb-80 border-b-1 pb-12")}>
-      {hideSection ? null : sectionIndex.includes(index) ? (
+    <div className={clsx("mt-6 mb-6 border-b-1 pb-12")}>
+      {hideSection ? null : sectionIndex.includes(data.id) ? (
         <h2 className="spacing-md mb-3 text-2xl font-bold uppercase">
           {sections[data.section]}. {data.section}
         </h2>
       ) : null}
+
       {hideTitle ? null : (
         <h3 className="mb-6 text-xl font-bold capitalize">
           {isTable ? "Table" : "Chart"} {sections[data.section]}.{data.id}{" "}

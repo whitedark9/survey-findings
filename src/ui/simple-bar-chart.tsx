@@ -30,6 +30,7 @@ export default function SimpleBarChart({ data }: { data: ReChartData[] }) {
       className="mx-auto w-full"
       style={{
         aspectRatio: 1,
+        maxWidth: "50vw",
         height: "80vh",
       }}
       responsive

@@ -58,6 +58,7 @@ export const data: { [key: string]: SurveyData } = {
     title: "Frequency distribution of respondents by main source of income",
     findings: [
       "Based on survey, 46.5% of respondents reported that main source of income is from small business/shop.",
+      "Other: Driver, Air-condition repair, Private teacher, Teacher, Paper salesman, Plumber.",
     ],
     table_data: {
       headers: ["Source of income", "frequency", "percentage"],
@@ -254,6 +255,7 @@ export const data: { [key: string]: SurveyData } = {
     title: "Frequency distribution of respondents by relationship to head",
     findings: [
       "Respondents were mostly spouses (35.9%) and heads of household (32.9%), followed by children (17.6%).",
+      "Other: House maid, Son, Niece, Daughter-in-law",
     ],
     table_data: {
       headers: ["Relations", "frequency", "percentage"],
@@ -578,43 +580,18 @@ export const data: { [key: string]: SurveyData } = {
   earthquake_training: {
     id: 33,
     title:
-      "Frequency distribution of household participated in earthquake training",
+      "Frequency distribution of household participated in earthquake training, emergency plan, emergency kit and early warnings",
     findings: [
-      "None of the households (100%) had participated in earthquake training.",
+      "None of the households (100%) had participated in earthquake training, had emergency plan, emergency kit and early warnings.",
     ],
     table_data: {
-      headers: ["Earthquake training", "frequency", "percentage"],
-      body: [{ x: "No", frequency: 170, percentage: 100 }],
-    },
-    section: "household preparedness response",
-  },
-  emergency_plan: {
-    id: 34,
-    title: "Frequency distribution of household having emergency plan",
-    findings: ["No households (100%) reported having an emergency plan."],
-    table_data: {
-      headers: ["Emergency plan", "frequency", "percentage"],
-      body: [{ x: "No", frequency: 170, percentage: 100 }],
-    },
-    section: "household preparedness response",
-  },
-  emergency_kit: {
-    id: 35,
-    title: "Frequency distribution of household having emergency kit",
-    findings: ["No households (100%) had emergency kits."],
-    table_data: {
-      headers: ["Emergency kit", "frequency", "percentage"],
-      body: [{ x: "No", frequency: 170, percentage: 100 }],
-    },
-    section: "household preparedness response",
-  },
-  early_warnings: {
-    id: 36,
-    title: "Frequency distribution of household receiving early warnings",
-    findings: ["No households (100%) received early warnings."],
-    table_data: {
-      headers: ["Receiving early warnings", "frequency", "percentage"],
-      body: [{ x: "No", frequency: 170, percentage: 100 }],
+      headers: ["Preparedness", "frequency", "percentage"],
+      body: [
+        { x: "Earthquake training", frequency: 170, percentage: 100 },
+        { x: "Emergency plan", frequency: 170, percentage: 100 },
+        { x: "Emergency kit", frequency: 170, percentage: 100 },
+        { x: "Early warnings", frequency: 170, percentage: 100 },
+      ],
     },
     section: "household preparedness response",
   },
@@ -623,6 +600,7 @@ export const data: { [key: string]: SurveyData } = {
     title: "Frequency distribution of place stayed first 2 weeks",
     findings: [
       "Majority stayed in temporary shelters (30%) or camps (22.9%), while 20% stayed outdoors.",
+      "Other: Rented",
     ],
     table_data: {
       headers: ["Place", "frequency", "percentage"],
