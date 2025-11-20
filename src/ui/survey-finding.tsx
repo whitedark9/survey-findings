@@ -22,13 +22,13 @@ export default function SurveyFinding({
   return (
     <div className={clsx("mt-6 mb-6 border-b-1 pb-12")}>
       {hideSection ? null : sectionIndex.includes(data.id) ? (
-        <h2 className="spacing-md mb-3 text-2xl font-bold uppercase">
+        <h2 className="spacing-md mb-3 text-4xl font-bold uppercase">
           {sections[data.section]}. {data.section}
         </h2>
       ) : null}
 
       {hideTitle ? null : (
-        <h3 className="mb-6 text-xl font-bold capitalize">
+        <h3 className="mb-6 text-3xl font-bold capitalize">
           {isTable ? "Table" : "Chart"} {sections[data.section]}.{data.id}{" "}
           {data.title}
         </h3>

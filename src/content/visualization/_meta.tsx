@@ -70,4 +70,5 @@ export default {
     "46.5 Association Between Injured Members And Other Conditions",
   "47-injured-members-struck-by-debris": "47 Injured Members Struck By Debris",
   "thank-you": "Thank You",
+  "00-all": "00 All Charts",
 };

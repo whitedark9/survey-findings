@@ -5,13 +5,8 @@ title: household_members
 import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-<div className={"mb-12 text-center text-4xl font-bold capitalize"}>
-  (1) Frequency distribution of respondents by household members
-</div>
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(1) Frequency distribution of respondents by household members</div>
 
-<Visualization
-  data={data["household_members"]}
-  index={0}
-  hideTitle={true}
-  hideSection={true}
-/>
+<Visualization data={data["household_members"]} index={0} hideTitle={true} hideSection={true} />
+
+    
