@@ -3,7 +3,7 @@ export default {
     type: "page",
     theme: {
       layout: "full",
-      sidebar: false,
+      sidebar: true,
       toc: false,
       copyPage: false,
       breadcrumb: false,

@@ -26,6 +26,7 @@ export default async function RootLayout({
             editLink={null}
             search={null}
             feedback={{ content: null }}
+            copyPageButton={false}
           >
             {children}
             {/* <Footer /> */}
