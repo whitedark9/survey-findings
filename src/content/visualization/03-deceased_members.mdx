@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: deceased_members
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (3) Frequency Distribution Of Respondents By Deceased Members
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(3) Frequency distribution of respondents by deceased members</div>
 
 <Visualization data={data["deceased_members"]} index={2} hideTitle={true} hideSection={true} />
 

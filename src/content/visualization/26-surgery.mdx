@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: surgery
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (26) Frequency Distribution Of Injured Patients Who Had Gone Surgery
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(26) Frequency distribution of injured patients who had gone surgery</div>
 
 <Visualization data={data["surgery"]} index={25} hideTitle={true} hideSection={true} />
 

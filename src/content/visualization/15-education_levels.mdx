@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: education_levels
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (15) Frequency Distribution Of Respondent According To Education Levels
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(15) Frequency distribution of respondent according to education levels</div>
 
 <Visualization data={data["education_levels"]} index={14} hideTitle={true} hideSection={true} />
 

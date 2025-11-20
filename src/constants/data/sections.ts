@@ -9,7 +9,7 @@ export const sections: { [key: string]: string } = {
   "perception suggestions": "H",
   "damage economic impact": "I",
   "interviewer observations": "J",
-  "association between injured memebers and other conditions": "K",
+  "association between injured members and other conditions": "K",
 };
 
 export const sectionIndex = [1, 4, 13, 17, 22, 28, 33, 38, 43, 45, 47];

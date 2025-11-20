@@ -31,12 +31,7 @@ export default function Visualization({
           <PieChartWithLabel data={data.table_data.body} />
         )}
         {data.id >= 47 && (
-          <TableWithTitle
-            onlyTable
-            data={data}
-            index={index}
-            className="min-h-75"
-          />
+          <TableWithTitle onlyTable data={data} index={index} />
         )}
       </div>
     </SurveyFinding>

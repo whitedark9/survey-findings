@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: emotional_state
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (45) Frequency Distribution Of Type Of Emotional State
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(45) Frequency distribution of type of emotional state</div>
 
 <Visualization data={data["emotional_state"]} index={41} hideTitle={true} hideSection={true} />
 

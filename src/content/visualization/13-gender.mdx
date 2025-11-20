@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: gender
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (13) Frequency Distribution Of Respondents According To Gender
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(13) Frequency distribution of respondents according to gender</div>
 
 <Visualization data={data["gender"]} index={12} hideTitle={true} hideSection={true} />
 

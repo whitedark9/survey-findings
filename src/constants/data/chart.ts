@@ -5,7 +5,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 1,
     title: "Frequency distribution of respondents by household members",
     findings: [
-      "The majority of respondents (52.9%) belonged to families <5 members ,47.1% belonged to families > 5 members.",
+      "According to survey, the majority of respondents (52.9%) belonged to families <5 members ,47.1% belonged to families > 5 members.",
     ],
     table_data: {
       headers: ["No. of household members", "frequency", "percentage"],
@@ -86,7 +86,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 5,
     title: "Frequency distribution of monthly income",
     findings: [
-      "Based on survey, 68.2% of respondents reported that their monthly incomes were >10 lakhs and 25.3% reported that their monthly incomes were 5-10 lakhs.",
+      "Based on survey, 68.2% of respondents reported that their monthly incomes were >10 lakhs and 25.3% reported that their monthly incomes were 5-10 lakhs, only 6.5% reported that their monthly incomes were less than 5 lakhs.",
     ],
     table_data: {
       headers: ["Monthly income", "frequency", "percentage"],
@@ -103,7 +103,7 @@ export const data: { [key: string]: SurveyData } = {
     title:
       "Frequency distribution of respondents by external walls of dwellings",
     findings: [
-      "Most dwellings had reinforced concrete (37.6%) and bamboo/wood (33.5%) walls.",
+      "According to survey data, most dwellings had reinforced concrete (37.6%) and bamboo/wood (33.5%) walls.",
     ],
     table_data: {
       headers: ["External wall", "frequency", "percentage"],
@@ -125,7 +125,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 7,
     title: "Frequency distribution of respondents by roof material",
     findings: [
-      "Roofs were mainly corrugated metal (40.6%) or concrete slabs/tiled (39.4%), with 20% using thatch/thin metal.",
+      "Roofs of 40.6% respondants were mainly corrugated metal, 39.4% were concrete slabs/tiled and only 20% used thatch/thin metal.",
     ],
     table_data: {
       headers: ["Roof material", "frequency", "percentage"],
@@ -154,7 +154,7 @@ export const data: { [key: string]: SurveyData } = {
     title:
       "Frequency distribution of respondents by number of storeys of dwellings",
     findings: [
-      "Majority of dwellings were 2-storey (50.6%), while 22.4% had 7 storeys.",
+      "By the survey day, Majority of dwellings were 2-storey (50.6%), while 22.4% had 7 storeys.",
     ],
     table_data: {
       headers: ["No. of storeys of dwellings", "frequency", "percentage"],
@@ -211,7 +211,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 11,
     title: "Frequency distribution of access to phone",
     findings: [
-      "Nearly universal access to phones (99.4%), with only 0.6% lacking access.",
+      "Nearly everyone had access to phones (99.4%), with only 0.6% lacking access.",
     ],
     table_data: {
       headers: ["Access to phone", "frequency", "percentage"],
@@ -225,7 +225,7 @@ export const data: { [key: string]: SurveyData } = {
   access_to_radio: {
     id: 12,
     title: "Frequency distribution of access to radio",
-    findings: ["75.9% had access to radio, while 24.1% did not."],
+    findings: ["75.9% had access to radio/TV, while 24.1% did not."],
     table_data: {
       headers: ["Access to radio", "frequency", "percentage"],
       body: [
@@ -239,7 +239,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 13,
     title: "Frequency distribution of respondents according to gender",
     findings: [
-      "Majority of respondents were female (72.4%), with males making up 27.6%.",
+      "Majority of respondents were female (72.4%), and males are only 27.6%.",
     ],
     table_data: {
       headers: ["Gender", "frequency", "percentage"],
@@ -273,7 +273,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 15,
     title: "Frequency distribution of respondent according to education levels",
     findings: [
-      "Most respondents had primary (32.4%) and secondary (27.1%) education, while 17.6% had university-level education.",
+      "Most respondents had primary (32.4%) and secondary (27.1%) education, while 17.6% had university-level education. But there were also no formal education (6.5%) ",
     ],
     table_data: {
       headers: ["Education levels", "frequency", "percentage"],
@@ -291,7 +291,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 16,
     title: "Frequency distribution of occupation at time of earthquake",
     findings: [
-      "Majority of respondents (42.4%) were dependents and 25.9% had own business.",
+      "Majority of respondents (42.4%) were dependents and 25.9% had their own business and jobs.",
     ],
     table_data: {
       headers: ["Occupation", "frequency", "percentage"],
@@ -345,7 +345,9 @@ export const data: { [key: string]: SurveyData } = {
   person_asleep: {
     id: 18,
     title: "Frequency distribution of person asleep at the time of earthquake",
-    findings: ["Majority (93.5%) were awake, only 6.5% asleep."],
+    findings: [
+      "According to survey, Majority (93.5%) were awake, only 6.5% asleep.",
+    ],
     table_data: {
       headers: ["Person asleep", "frequency", "percentage"],
       body: [
@@ -359,7 +361,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 19,
     title:
       "Frequency distribution of respondents by number of people who attempt to evacuate",
-    findings: ["70.6% attempted evacuation, while 29.4% did not."],
+    findings: ["70.6% attempted evacuation, while 29.4% could not or did not."],
     table_data: {
       headers: ["Attempt to evacuate", "frequency", "percentage"],
       body: [
@@ -374,7 +376,7 @@ export const data: { [key: string]: SurveyData } = {
     title:
       "Frequency distribution of times from earthquake start to evacuations",
     findings: [
-      "Most evacuations (78.2%) occurred within 10 minutes of the earthquake.",
+      "Among the evacuations, 78.2% occurred within 10 minutes of the earthquake.",
     ],
     table_data: {
       headers: ["Time in mins", "frequency", "percentage"],
@@ -388,7 +390,9 @@ export const data: { [key: string]: SurveyData } = {
   struck_by_debris: {
     id: 21,
     title: "Frequency distribution of person struck by falling debris",
-    findings: ["26.5% were struck by debris, while 73.5% were not."],
+    findings: [
+      "During earthquake, 26.5% were struck by debris, while 73.5% were not.",
+    ],
     table_data: {
       headers: ["Person struck", "frequency", "percentage"],
       body: [
@@ -401,7 +405,9 @@ export const data: { [key: string]: SurveyData } = {
   injured_members_yes_no: {
     id: 22,
     title: "Frequency distribution of injured members",
-    findings: ["28.8% reported injuries, while 71.2% reported none."],
+    findings: [
+      "Based on this survey, 28.8% reported injuries, while 71.2% reported none.",
+    ],
     table_data: {
       headers: ["Injured members", "frequency", "percentage"],
       body: [
@@ -415,7 +421,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 23,
     title: "Frequency distribution of injured members by nature of injury",
     findings: [
-      "Soft tissue injuries/lacerations were most common (42.9%), followed by crush injuries (24.5%).",
+      "The most common was soft tissue injuries/lacerations (42.9%), followed by crush injuries (24.5%).",
     ],
     table_data: {
       headers: ["Nature of injury", "frequency", "percentage"],
@@ -437,7 +443,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 24,
     title: "Frequency distribution of injured members by severity of injury",
     findings: [
-      "Injuries ranged from minor (36.7%) to life-threatening/disabling (20.4%), showing diverse severity.",
+      "According to survey, Injuries ranged from minor (36.7%) to life-threatening/disabling (20.4%). There were no big gap among the percentage of severity.",
     ],
     table_data: {
       headers: ["Severity", "frequency", "percentage"],
@@ -458,7 +464,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 25,
     title: "Frequency distribution of places of first treatment",
     findings: [
-      "Most injured sought hospital care (44.9%), while 24.5% treated themselves at home.",
+      "Most injured went for hospital care (44.9%), while 24.5% treated themselves at home.",
     ],
     table_data: {
       headers: ["Place", "frequency", "percentage"],
@@ -475,7 +481,9 @@ export const data: { [key: string]: SurveyData } = {
   surgery: {
     id: 26,
     title: "Frequency distribution of injured patients who had gone surgery",
-    findings: ["22.4% underwent surgery, while 77.6% did not."],
+    findings: [
+      "Among the injured, 22.4% underwent surgery, while 77.6% did not.",
+    ],
     table_data: {
       headers: ["Surgical intervention", "frequency", "percentage"],
       body: [
@@ -511,7 +519,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 28,
     title: "Frequency distribution of deceased persons by age",
     findings: [
-      "Majority of deceased were aged 40–64 years (41.9%), followed by 5–39 years (35.5%).",
+      "Among the deceased persons by age, Majority of deceased were aged 40–64 years (41.9%), followed by 5–39 years (35.5%). There were also 9.7% of children under 5 years.",
     ],
     table_data: {
       headers: ["Age", "frequency", "percentage"],
@@ -527,9 +535,7 @@ export const data: { [key: string]: SurveyData } = {
   deceased_by_gender: {
     id: 29,
     title: "Frequency distribution of deceased persons by gender",
-    findings: [
-      "Most deceased were female (83.9%), with males accounting for 16.1%.",
-    ],
+    findings: ["Most deceased were female (83.9%) and males were 16.1%."],
     table_data: {
       headers: ["Gender", "frequency", "percentage"],
       body: [
@@ -556,7 +562,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 31,
     title: "Frequency distribution of cause of death",
     findings: [
-      "Collapse of structures was the leading cause (87.1%), followed by crushing (12.9%).",
+      "Collapse of structures was the leading cause of death (87.1%), where crushing was 12.9%.",
     ],
     table_data: {
       headers: ["Cause", "frequency", "percentage"],
@@ -599,7 +605,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 37,
     title: "Frequency distribution of place stayed first 2 weeks",
     findings: [
-      "Majority stayed in temporary shelters (30%) or camps (22.9%), while 20% stayed outdoors.",
+      "Majority stayed in temporary shelters (30%) or camps (22.9%), while 20% stayed outdoors. Some (12.9%) went back to their homes and some (10.6%) stayed with their relatives or friends.",
       "Other: Rented",
     ],
     table_data: {
@@ -619,7 +625,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 38,
     title: "Frequency distribution of dwellings collapsed",
     findings: [
-      "35.9% of dwellings fully collapsed, 20.6% partially collapsed, while 32.9% had minor damage.",
+      "35.9% of dwellings fully collapsed, 20.6% partially collapsed, while 32.9% had only minor damage.",
     ],
     table_data: {
       headers: ["Dwellings collapsed", "frequency", "percentage"],
@@ -636,7 +642,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 39,
     title: "Frequency distribution of estimated cost of damage (lakh)",
     findings: [
-      "Half (50.6%) reported damages under 10 lakh, while 25.9% had damages between 100–1000 lakh.",
+      "Repair cost for half (50.6%) of the reported damages was under 10 lakh, while 25.9% had damages between 100–1000 lakh. There were also 1.2% of > 1000 lakh repair cost.",
     ],
     table_data: {
       headers: ["Estimated cost", "frequency", "percentage"],
@@ -657,7 +663,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 40,
     title: "Frequency distribution of loss of income (percentage)",
     findings: [
-      "38.8% lost 80% or more of income, while 30.6% lost between 50–79%.",
+      "38.8% lost 80% or more of their income, while 30.6% lost between 50–79%.",
     ],
     table_data: {
       headers: ["Percent reduction", "frequency", "percentage"],
@@ -753,7 +759,7 @@ export const data: { [key: string]: SurveyData } = {
     id: 45,
     title: "Frequency distribution of type of emotional state",
     findings: [
-      "Majority (95.9%) reported being calm, while 4.1% were distressed.",
+      "Majority (95.9%) reported being calm during interview, while 4.1% were distressed.",
     ],
     table_data: {
       headers: ["Emotional state", "frequency", "percentage"],
@@ -800,7 +806,7 @@ export const data: { [key: string]: SurveyData } = {
         { x: "Other", frequency: 0, percentage: 1 },
       ],
     },
-    section: "association between injured memebers and other conditions",
+    section: "association between injured members and other conditions",
   },
   injured_members_within_roof: {
     id: 48,
@@ -825,7 +831,7 @@ export const data: { [key: string]: SurveyData } = {
         { x: "Concrete slab / tiled roof", frequency: 29, percentage: 38 },
       ],
     },
-    section: "association between injured memebers and other conditions",
+    section: "association between injured members and other conditions",
   },
   injured_members_by_ownership: {
     id: 49,
@@ -847,7 +853,7 @@ export const data: { [key: string]: SurveyData } = {
         { x: "Other", frequency: 1, percentage: 4 },
       ],
     },
-    section: "association between injured memebers and other conditions",
+    section: "association between injured members and other conditions",
   },
   injured_members_struck_by_debris: {
     id: 50,
@@ -863,6 +869,6 @@ export const data: { [key: string]: SurveyData } = {
         { x: "Yes", frequency: 31, percentage: 14 },
       ],
     },
-    section: "association between injured memebers and other conditions",
+    section: "association between injured members and other conditions",
   },
 };

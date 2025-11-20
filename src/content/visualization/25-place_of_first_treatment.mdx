@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: place_of_first_treatment
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (25) Frequency Distribution Of Places Of First Treatment
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(25) Frequency distribution of places of first treatment</div>
 
 <Visualization data={data["place_of_first_treatment"]} index={24} hideTitle={true} hideSection={true} />
 

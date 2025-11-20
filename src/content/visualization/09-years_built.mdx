@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: years_built
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (9) Frequency Distribution Of Dwellings By Years Built
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(9) Frequency distribution of dwellings by years built</div>
 
 <Visualization data={data["years_built"]} index={8} hideTitle={true} hideSection={true} />
 

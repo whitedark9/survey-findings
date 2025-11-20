@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: monthly_income
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (5) Frequency Distribution Of Monthly Income
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(5) Frequency distribution of monthly income</div>
 
 <Visualization data={data["monthly_income"]} index={4} hideTitle={true} hideSection={true} />
 

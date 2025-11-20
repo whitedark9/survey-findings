@@ -21,7 +21,7 @@ const COLORS = [
 export default function PieChartWithLabel({ data }: { data: ReChartData[] }) {
   return (
     <PieChart
-      className="mx-auto w-full"
+      className="mx-auto w-full text-2xl"
       style={{
         maxHeight: "80vh",
         aspectRatio: 1,

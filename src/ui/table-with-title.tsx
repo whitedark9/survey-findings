@@ -22,7 +22,7 @@ export default function TableWithTitle({
 
   if (onlyTable)
     return (
-      <table className={"mb-6 min-h-70 w-full border-1 text-center"}>
+      <table className={"mb-6 min-h-70 w-full border-1 text-center text-lg"}>
         <thead className="h-16">
           <tr className="capitalize">
             {data.table_data.headers.map((header) => (

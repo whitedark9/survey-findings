@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: earthquake_training
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (33) Frequency Distribution Of Household Participated In Earthquake Training, Emergency Plan, Emergency Kit And Early Warnings
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(33) Frequency distribution of household participated in earthquake training, emergency plan, emergency kit and early warnings</div>
 
 <Visualization data={data["earthquake_training"]} index={32} hideTitle={true} hideSection={true} />
 

@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: occupation_at_time
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (16) Frequency Distribution Of Occupation At Time Of Earthquake
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(16) Frequency distribution of occupation at time of earthquake</div>
 
 <Visualization data={data["occupation_at_time"]} index={15} hideTitle={true} hideSection={true} />
 

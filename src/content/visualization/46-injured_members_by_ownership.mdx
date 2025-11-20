@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: injured_members_by_ownership
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (49) Association Between Injured Members And Ownership Of Dwellings
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(49) Association between injured members and ownership of dwellings</div>
 
 <Visualization data={data["injured_members_by_ownership"]} index={45} hideTitle={true} hideSection={true} />
 

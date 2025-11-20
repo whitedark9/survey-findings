@@ -37,11 +37,18 @@ export default function SurveyFinding({
       {children}
 
       {data.p_value !== undefined ? (
-        <Callout type={"error"}>P Value: {data.p_value}</Callout>
+        <Callout emoji={""} type={"error"} className="text-2xl">
+          P Value: {data.p_value}
+        </Callout>
       ) : null}
 
       {data.findings.map((finding, idx) => (
-        <Callout type={idx === 0 ? "info" : "important"} key={idx}>
+        <Callout
+          className="text-2xl"
+          emoji={""}
+          type={idx === 0 ? "info" : "important"}
+          key={idx}
+        >
           {finding}
         </Callout>
       ))}

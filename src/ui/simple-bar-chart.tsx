@@ -27,11 +27,11 @@ const COLORS = [
 export default function SimpleBarChart({ data }: { data: ReChartData[] }) {
   return (
     <BarChart
-      className="mx-auto w-full"
+      className="mx-auto w-full text-2xl"
       style={{
         aspectRatio: 1,
         maxWidth: "50vw",
-        height: "80vh",
+        height: "88vh",
       }}
       responsive
       data={data as unknown as any[]}
@@ -40,11 +40,11 @@ export default function SimpleBarChart({ data }: { data: ReChartData[] }) {
       <XAxis
         dataKey="x"
         interval="preserveStartEnd"
-        height={200}
+        height={360}
         angle={-45}
         textAnchor="end"
       />
-      <YAxis dataKey={"frequency"} />
+      <YAxis dataKey={"frequency"} width={200} />
       <Tooltip />
       <Bar
         dataKey="frequency"

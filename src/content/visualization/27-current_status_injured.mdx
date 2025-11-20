@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: current_status_injured
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (27) Frequency Distribution Of Current Status Of Injured Persons (at The Time Of Interview)
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(27) Frequency distribution of current status of injured persons (at the time of interview)</div>
 
 <Visualization data={data["current_status_injured"]} index={26} hideTitle={true} hideSection={true} />
 

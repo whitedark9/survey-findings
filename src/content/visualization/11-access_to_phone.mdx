@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: access_to_phone
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (11) Frequency Distribution Of Access To Phone
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(11) Frequency distribution of access to phone</div>
 
 <Visualization data={data["access_to_phone"]} index={10} hideTitle={true} hideSection={true} />
 

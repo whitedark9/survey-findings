@@ -1,9 +1,14 @@
-import { data } from "~/constants/data/chart";
-import Visualization from "~/ui/visualization";
+---
+title: Survey Findings
+---
 
-# Survey Finding Charts
+import { sections } from "~/constants/data/sections";
 
-{Object.keys(data).map((key, index)=> {
-return (
+<div className={"mb-10 text-center text-6xl font-bold"}>Survey Findings</div>
 
-<Visualization key={key} data={data[key]} index={index} />) })}
+{Object.keys(sections).map((key)=> (
+
+<div className="ms-20 mb-2 text-4xl font-bold capitalize" key={key}>
+  {sections[key]}. {key}
+</div>
+))}

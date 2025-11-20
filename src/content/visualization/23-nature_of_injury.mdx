@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: nature_of_injury
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (23) Frequency Distribution Of Injured Members By Nature Of Injury
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(23) Frequency distribution of injured members by nature of injury</div>
 
 <Visualization data={data["nature_of_injury"]} index={22} hideTitle={true} hideSection={true} />
 

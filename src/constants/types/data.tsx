@@ -9,7 +9,7 @@ export type Section =
   | "perception suggestions"
   | "damage economic impact"
   | "interviewer observations"
-  | "association between injured memebers and other conditions";
+  | "association between injured members and other conditions";
 
 export type TableData = {
   headers: string[];

@@ -1,7 +1,11 @@
-import { data } from "~/constants/data";
+---
+title: injured_members_yes_no
+---
+
+import { data } from "~/constants/data/chart";
 import Visualization from "~/ui/visualization";
 
-# (22) Frequency Distribution Of Injured Members
+<div className={"text-center text-4xl font-bold mb-12 capitalize"}>(22) Frequency distribution of injured members</div>
 
 <Visualization data={data["injured_members_yes_no"]} index={21} hideTitle={true} hideSection={true} />
 

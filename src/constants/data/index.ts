@@ -822,7 +822,7 @@ export const data: { [key: string]: SurveyData } = {
         { x: "Other", frequency: 0, percentage: 1 },
       ],
     },
-    section: "association between injured memebers and other conditions",
+    section: "association between injured members and other conditions",
   },
   injured_members_within_roof: {
     id: 48,
@@ -847,7 +847,7 @@ export const data: { [key: string]: SurveyData } = {
         { x: "Concrete slab / tiled roof", frequency: 29, percentage: 38 },
       ],
     },
-    section: "association between injured memebers and other conditions",
+    section: "association between injured members and other conditions",
   },
   injured_members_by_ownership: {
     id: 49,
@@ -869,7 +869,7 @@ export const data: { [key: string]: SurveyData } = {
         { x: "Other", frequency: 1, percentage: 4 },
       ],
     },
-    section: "association between injured memebers and other conditions",
+    section: "association between injured members and other conditions",
   },
   injured_members_struck_by_debris: {
     id: 50,
@@ -885,6 +885,6 @@ export const data: { [key: string]: SurveyData } = {
         { x: "Yes", frequency: 31, percentage: 14 },
       ],
     },
-    section: "association between injured memebers and other conditions",
+    section: "association between injured members and other conditions",
   },
 };
