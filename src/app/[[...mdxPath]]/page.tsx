@@ -1,5 +1,5 @@
 import { generateStaticParamsFor, importPage } from "nextra/pages";
-import WrapperKeyboardShortcut from "~/ui/wrapper-keyboard-shortcut";
+import WrapperKeyboardShortcut from "~/components/wrapper/wrapper-keyboard-shortcut";
 import { useMDXComponents as getMDXComponents } from "../../../mdx-components";
 
 export const generateStaticParams = generateStaticParamsFor("mdxPath");
