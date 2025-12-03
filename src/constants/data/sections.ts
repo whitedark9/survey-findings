@@ -11,5 +11,3 @@ export const SECTIONS: { [key: string]: string } = {
   J: "perception and suggestions",
   K: "association between injured members and other conditions",
 };
-
-export const sectionIndex = [1, 4, 13, 17, 22, 28, 33, 38, 43, 45, 47];

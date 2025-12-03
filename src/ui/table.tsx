@@ -9,7 +9,10 @@ export default function Table({ data }: { data: SurveyData }) {
   const no_percentage = data.id === 45;
 
   return (
-    <table className="mb-6 w-full border-1 text-center capitalize">
+    <table
+      className="mb-6 w-full border-1 text-center capitalize"
+      style={{ fontSize: 12 }}
+    >
       <thead>
         <tr className="">
           {data.table_data.head.map((e, i) =>

@@ -1,14 +1,17 @@
 ---
-title: Survey Findings Visualization
+title: Survey Findings
 ---
 
-import { DATA } from "~/constants/data";
-import SurveyFindings from "~/ui/survey-findings";
+<h1
+  style={{ fontSize: 48, fontFamily: "Verdana, sans-serif" }}
+  className="my-75 text-center font-bold capitalize"
+>
+  Survey Findings
+</h1>
 
-{Object.keys(DATA).map((key)=> {
-
-return (
-
-<SurveyFindings data={DATA[key]} key={key} isTable={false} section={key} />
-
-) })}
+<h2
+  style={{ fontSize: 28, fontFamily: "Verdana, sans-serif" }}
+  className="text-end font-bold capitalize"
+>
+  By Ohmar Rani
+</h2>

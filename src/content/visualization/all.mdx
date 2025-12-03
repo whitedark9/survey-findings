@@ -1,0 +1,14 @@
+---
+title: Survey Findings Visualization
+---
+
+import { DATA } from "~/constants/data";
+import SurveyFindings from "~/ui/survey-findings";
+
+{Object.keys(DATA).map((key)=> {
+
+return (
+
+<SurveyFindings data={DATA[key]} key={key} isTable={false} section={key} />
+
+) })}

@@ -49,7 +49,7 @@ export default function SimpleBarChart({ data }: { data: ReChartData[] }) {
       <Tooltip />
       <Bar
         dataKey="frequency"
-        fill="#0b0bbcff"
+        fill="#33CC33"
         label={{ position: "top" }}
         activeBar={<Rectangle fill="#0404e7ff" stroke="blue" />}
       />
