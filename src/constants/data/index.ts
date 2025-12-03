@@ -1,890 +1,714 @@
-import { SurveyData } from "../types/data";
+import { Data } from "../types/data";
 
-export const data: { [key: string]: SurveyData } = {
-  household_members: {
-    id: 1,
-    title: "Frequency distribution of respondents by household members",
-    findings: [
-      "The majority of respondents (52.9%) belonged to families <5 members ,47.1% belonged to families > 5 members.",
-    ],
-    table_data: {
-      headers: ["No. of household members", "frequency", "percentage"],
-      body: [
-        { x: "<5", frequency: 90, percentage: 52.9 },
-        { x: "5 and above", frequency: 80, percentage: 47.1 },
-      ],
+export const DATA: Data = {
+  A: {
+    relation_to_head: {
+      id: 1,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "daughter", frequency: 22, percentage: 10.6 },
+          { x: "head", frequency: 107, percentage: 51.4 },
+          { x: "housewife", frequency: 36, percentage: 17.3 },
+          { x: "mother", frequency: 6, percentage: 2.9 },
+          { x: "parent", frequency: 2, percentage: 1 },
+          { x: "sister", frequency: 1, percentage: 0.5 },
+          { x: "son", frequency: 4, percentage: 1.9 },
+          { x: "spouse", frequency: 30, percentage: 14.4 },
+        ],
+      },
+      title: "Frequency distribution of relation to head",
+      finding:
+        "Most respondents were household heads (51.4%), while the least represented relation was sister (0.5%).",
     },
-    section: "household identification",
+    household_members: {
+      id: 2,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "≤5", frequency: 148, percentage: 71.2 },
+          { x: ">5", frequency: 60, percentage: 28.8 },
+        ],
+      },
+      title: "Frequency distribution of household members",
+      finding:
+        "The majority of households had ≤5 members (71.2%), compared to only 28.8% with more than 5.",
+    },
+    injured_members: {
+      id: 3,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "0", frequency: 177, percentage: 85 },
+          { x: "1", frequency: 14, percentage: 6.7 },
+          { x: "2", frequency: 10, percentage: 4.8 },
+          { x: "3", frequency: 2, percentage: 1 },
+          { x: "4", frequency: 4, percentage: 1.9 },
+          { x: "6", frequency: 1, percentage: 0.5 },
+        ],
+      },
+      title: "Frequency distribution of injured members",
+      finding:
+        "A striking 85% of households reported no injured members, while only 0.5% reported as many as six injured.",
+    },
+    deceased_members: {
+      id: 4,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "0", frequency: 204, percentage: 98.1 },
+          { x: "1", frequency: 4, percentage: 1.9 },
+        ],
+      },
+      title: "Frequency distribution of deceased members",
+      finding:
+        "Nearly all households (98.1%) reported no deceased members, with just 1.9% reporting one deaths.",
+    },
   },
-  injured_members: {
-    id: 2,
-    title: "Frequency distribution of respondents by injured members",
-    findings: [
-      "According to survey, 28.8% of respondents reported that at least one family member experienced injuries, while 71.2% reported no injuries.",
-    ],
-    table_data: {
-      headers: ["Injured members", "frequency", "percentage"],
-      body: [
-        { x: "0", frequency: 121, percentage: 71.2 },
-        { x: "1", frequency: 40, percentage: 23.5 },
-        { x: "2", frequency: 7, percentage: 4.1 },
-        { x: "3", frequency: 2, percentage: 1.2 },
-      ],
+  B: {
+    main_source_of_income: {
+      id: 5,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Agriculture/farming", frequency: 1, percentage: 0.5 },
+          {
+            x: "Daily labour/informal work",
+            frequency: 34,
+            percentage: 16.3,
+          },
+          { x: "Small bussiness/shop", frequency: 137, percentage: 65.9 },
+          {
+            x: "Private salaried employment",
+            frequency: 16,
+            percentage: 7.7,
+          },
+          { x: "Government employment", frequency: 8, percentage: 3.8 },
+          { x: "Remittances/pensions", frequency: 5, percentage: 2.4 },
+          { x: "Other", frequency: 7, percentage: 3.4 },
+        ],
+      },
+      title: "Frequency distribution of main source of income",
+      finding:
+        "Small businesses/shops dominated as the main source of income (65.9%), while agriculture/farming was least common (0.5%).",
     },
-    section: "household identification",
+    monthly_income: {
+      id: 6,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "≤5 lakh", frequency: 166, percentage: 79.8 },
+          { x: ">5 lakh", frequency: 42, percentage: 20.2 },
+        ],
+      },
+      title: "Frequency distribution of monthly income",
+      finding:
+        "Most households (79.8%) earned ≤5 units monthly, compared to 20.2% earning above 5.",
+    },
+    external_walls_of_dwellings: {
+      id: 7,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "bamboo/thatch/wood", frequency: 56, percentage: 26.9 },
+          { x: "Sun-dried brick", frequency: 36, percentage: 17.3 },
+          { x: "Burnt brick/masonry", frequency: 50, percentage: 24 },
+          {
+            x: "Reinforced concrete (RC)",
+            frequency: 66,
+            percentage: 31.8,
+          },
+        ],
+      },
+      title: "Frequency distribution of external walls of dwellings",
+      finding:
+        "Reinforced concrete walls were most common (31.8%), while sun-dried brick was least (17.3%).",
+    },
+    roof_material: {
+      id: 8,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          {
+            x: "Thatch/corrugated metal (thin)",
+            frequency: 74,
+            percentage: 35.6,
+          },
+          {
+            x: "Corrugated metal (properly fixed)",
+            frequency: 71,
+            percentage: 34.1,
+          },
+          {
+            x: "Concrete slab/tiled roof",
+            frequency: 63,
+            percentage: 30.3,
+          },
+        ],
+      },
+      title: "Frequency distribution of roof material",
+      finding:
+        "Thatch/corrugated thin metal roofs were slightly more common (35.6%) than concrete slab/tiled roofs (30.3%).",
+    },
+    storeys_of_dwellings: {
+      id: 9,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "1", frequency: 27, percentage: 13 },
+          { x: "2", frequency: 133, percentage: 63.9 },
+          { x: "3", frequency: 17, percentage: 8.2 },
+          { x: "4", frequency: 9, percentage: 4.3 },
+          { x: "5", frequency: 2, percentage: 1 },
+          { x: "6", frequency: 6, percentage: 2.9 },
+          { x: "7", frequency: 13, percentage: 6.3 },
+          { x: "10", frequency: 1, percentage: 0.5 },
+        ],
+      },
+      title: "Frequency distribution of storeys of dwellings",
+      finding:
+        "Two-storey dwellings were dominant (63.9%), while 10-storey dwellings were rare (0.5%).",
+    },
+    years_built: {
+      id: 10,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "≤10", frequency: 80, percentage: 38.5 },
+          { x: ">10", frequency: 128, percentage: 61.5 },
+        ],
+      },
+      title: "Frequency distribution of years built",
+      finding:
+        "Most dwellings were older than 10 years (61.5%), compared to 38.5% built within the last decade.",
+    },
+    ownership_of_dwellings: {
+      id: 11,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Owned by household", frequency: 151, percentage: 72.6 },
+          { x: "Rented", frequency: 54, percentage: 26 },
+          {
+            x: "Occupied without formal title",
+            frequency: 3,
+            percentage: 1.4,
+          },
+        ],
+      },
+      title: "Frequency distribution of ownership of dwellings",
+      finding:
+        "Household ownership was highest (72.6%), while occupation without formal title was rare (1.4%).",
+    },
+    access_to_phone: {
+      id: 12,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Yes", frequency: 201, percentage: 96.6 },
+          { x: "No", frequency: 7, percentage: 3.4 },
+        ],
+      },
+      title: "Frequency distribution of access to phone",
+      finding:
+        "Almost universal access to phones (96.6%), with very few households lacking them (3.4%).",
+    },
+    access_to_radio: {
+      id: 13,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Yes", frequency: 179, percentage: 86.1 },
+          { x: "No", frequency: 29, percentage: 13.9 },
+        ],
+      },
+      title: "Frequency distribution of access to radio",
+      finding: "Most households had radios (86.1%), while 13.9% did not.",
+    },
   },
-  deceased_members: {
-    id: 3,
-    title: "Frequency distribution of respondents by deceased members",
-    findings: [
-      "Based on survey, 18.2% of respondents reported that at least one member died during earthquake, while 81.8% reported no dead.",
-    ],
-    table_data: {
-      headers: ["Deceased members", "frequency", "percentage"],
-      body: [
-        { x: "0", frequency: 139, percentage: 81.8 },
-        { x: "1", frequency: 14, percentage: 8.2 },
-        { x: "2", frequency: 6, percentage: 3.5 },
-        { x: "3", frequency: 5, percentage: 2.9 },
-        { x: "4", frequency: 1, percentage: 0.6 },
-        { x: "5", frequency: 4, percentage: 2.4 },
-        { x: "6", frequency: 1, percentage: 0.6 },
-      ],
+  C: {
+    gender: {
+      id: 14,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Male", frequency: 74, percentage: 35.6 },
+          { x: "Female", frequency: 134, percentage: 64.4 },
+        ],
+      },
+      title: "Frequency distribution of gender",
+      finding:
+        "Females made up the majority of respondents (64.4%), while males accounted for 35.6%.",
     },
-    section: "household identification",
+    age_of_respondents: {
+      id: 15,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "≤40", frequency: 55, percentage: 26.4 },
+          { x: "41-60", frequency: 113, percentage: 54.3 },
+          { x: ">60", frequency: 40, percentage: 19.2 },
+        ],
+      },
+      title: "Frequency distribution of age of respondents",
+      finding:
+        "Most respondents were aged 41–60 (54.3%), while the smallest group was over 60 (19.2%).",
+    },
+    relationship_to_head: {
+      id: 16,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "head", frequency: 106, percentage: 51 },
+          { x: "spouse", frequency: 65, percentage: 31.3 },
+          { x: "child", frequency: 29, percentage: 13.9 },
+          { x: "parent", frequency: 7, percentage: 3.4 },
+          { x: "Other", frequency: 1, percentage: 0.5 },
+        ],
+      },
+      title: "Frequency distribution of relationship to head",
+      finding:
+        "Over half of respondents were household heads (51%), while only 0.5% fell into 'other' relations.",
+    },
+    education_levels: {
+      id: 17,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "primary", frequency: 28, percentage: 13.5 },
+          { x: "secondary", frequency: 96, percentage: 46.2 },
+          { x: "higher secondary", frequency: 76, percentage: 36.5 },
+          { x: "university/tertiary", frequency: 8, percentage: 3.8 },
+        ],
+      },
+      title: "Frequency distribution of education levels",
+      finding:
+        "Secondary education was most common (46.2%), while university/tertiary education was least (3.8%).",
+    },
+    occupation_at_the_time_of_earthquake: {
+      id: 18,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Daily labour", frequency: 2, percentage: 1 },
+          { x: "dependent", frequency: 62, percentage: 29.8 },
+          { x: "Government employment", frequency: 1, percentage: 0.5 },
+          { x: "own business", frequency: 30, percentage: 14.4 },
+          { x: "small business", frequency: 113, percentage: 54.3 },
+        ],
+      },
+      title: "Frequency distribution of occupation at the time of earthquake",
+      finding:
+        "Small business was the dominant occupation (54.3%), while government employment was rare (0.5%).",
+    },
   },
-  main_source_of_income: {
-    id: 4,
-    title: "Frequency distribution of respondents by main source of income",
-    findings: [
-      "Based on survey, 46.5% of respondents reported that main source of income is from small business/shop.",
-    ],
-    table_data: {
-      headers: ["Source of income", "frequency", "percentage"],
-      body: [
-        { x: "Agriculture/farming", frequency: 3, percentage: 1.8 },
-        {
-          x: "Daily labor/ informal work",
-          frequency: 39,
-          percentage: 22.9,
-        },
-        { x: "Small businesses/ shop", frequency: 79, percentage: 46.5 },
-        {
-          x: "Private salaried employment",
-          frequency: 34,
-          percentage: 20,
-        },
-        { x: "Government employment", frequency: 6, percentage: 3.5 },
-        { x: "Remittance/ pensions", frequency: 1, percentage: 0.6 },
-        { x: "Other", frequency: 8, percentage: 4.7 },
-      ],
+  D: {
+    place_during_earthquake: {
+      id: 19,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          {
+            x: "inside home (ground floor",
+            frequency: 99,
+            percentage: 47.6,
+          },
+          {
+            x: "inside home (upper floor)",
+            frequency: 57,
+            percentage: 27.4,
+          },
+          {
+            x: "in structural public building",
+            frequency: 17,
+            percentage: 8.2,
+          },
+          { x: "outside near home", frequency: 25, percentage: 12 },
+          { x: "in vehicle", frequency: 6, percentage: 2.9 },
+          { x: "other", frequency: 4, percentage: 1.9 },
+        ],
+      },
+      title: "Frequency distribution of place during earthquake",
+      finding:
+        "Nearly half were inside their home on the ground floor (47.6%), while very few were in vehicles (2.9%) or other places (1.9%).",
     },
-    section: "household socio-economic status",
+    person_asleep_during_earthquake: {
+      id: 20,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Yes", frequency: 17, percentage: 8.2 },
+          { x: "No", frequency: 191, percentage: 91.8 },
+        ],
+      },
+      title: "Frequency distribution of person asleep during earthquake",
+      finding:
+        "The vast majority were awake (91.8%), with only 8.2% asleep during the earthquake.",
+    },
+    person_evacuated_during_earthquake: {
+      id: 21,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Yes", frequency: 116, percentage: 55.8 },
+          { x: "No", frequency: 92, percentage: 44.2 },
+        ],
+      },
+      title: "Frequency distribution of person evacuated during earthquake",
+      finding: "More than half evacuated (55.8%), while 44.2% did not.",
+    },
+    struck_by_debris_during_evacuation: {
+      id: 22,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Yes", frequency: 33, percentage: 15.9 },
+          { x: "No", frequency: 175, percentage: 84.1 },
+        ],
+      },
+      title: "Frequency distribution of struck by debris during evacuation",
+      finding:
+        "Most evacuees were not struck by debris (84.1%), though 15.9% reported being hit.",
+    },
   },
-  monthly_income: {
-    id: 5,
-    title: "Frequency distribution of monthly income",
-    findings: [
-      "Based on survey, 68.2% of respondents reported that their monthly incomes were >10 lakhs and 25.3% reported that their monthly incomes were 5-10 lakhs.",
-    ],
-    table_data: {
-      headers: ["Monthly income", "frequency", "percentage"],
-      body: [
-        { x: "<5 lakh", frequency: 11, percentage: 6.5 },
-        { x: "5-10 lakh", frequency: 43, percentage: 25.3 },
-        { x: ">10 lakh", frequency: 116, percentage: 68.2 },
-      ],
+  E: {
+    injury_persons: {
+      id: 23,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Yes", frequency: 31, percentage: 14.9 },
+          { x: "No", frequency: 177, percentage: 85.1 },
+        ],
+      },
+      title: "Frequency distribution of injury persons",
+      finding:
+        "Most households reported no injuries (85.1%), while 14.9% had at least one injured person.",
     },
-    section: "household socio-economic status",
+    type_of_injury: {
+      id: 24,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "fracture", frequency: 1, percentage: 3.2 },
+          { x: "head injury", frequency: 2, percentage: 6.5 },
+          { x: "soft tissue injury", frequency: 27, percentage: 87.1 },
+          { x: "crush injury", frequency: 1, percentage: 3.2 },
+        ],
+      },
+      title: "Frequency distribution of type of injury",
+      finding:
+        "Soft tissue injuries dominated (13%), while fractures and crush injuries were rare (0.5% each).",
+    },
+    severity_of_injury: {
+      id: 25,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          {
+            x: "minor (no hospital visit)",
+            frequency: 27,
+            percentage: 87.1,
+          },
+          { x: "moderate (out patient)", frequency: 3, percentage: 9.7 },
+          {
+            x: "severe (hospital admission)",
+            frequency: 1,
+            percentage: 3.2,
+          },
+        ],
+      },
+      title: "Frequency distribution of severity of injury",
+      finding:
+        "Minor injuries without hospital visits were most common (13%), while severe hospital admissions were rare (0.5%).",
+    },
+    place_of_first_treatment: {
+      id: 26,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "home", frequency: 6, percentage: 19.4 },
+          { x: "primary health center", frequency: 8, percentage: 25.8 },
+          { x: "hospital", frequency: 10, percentage: 32.3 },
+          { x: "field clinic", frequency: 7, percentage: 22.6 },
+        ],
+      },
+      title: "Frequency distribution of place of first treatment",
+      finding:
+        "Hospitals were the most frequent first treatment location (4.8%), while home care was least (2.9%).",
+    },
+    surgery_needed: {
+      id: 27,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [{ x: "No", frequency: 31, percentage: 100 }],
+      },
+      title: "Frequency distribution of surgery needed",
+      finding: "None of the injured required surgery (100% reported 'No').",
+    },
+    current_status_of_injured_persons: {
+      id: 28,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "fully recover", frequency: 23, percentage: 74.2 },
+          { x: "partially recover", frequency: 7, percentage: 22.6 },
+          { x: "ongoing treatment", frequency: 1, percentage: 3.2 },
+        ],
+      },
+      title: "Frequency distribution of current status of injured persons",
+      finding:
+        "Most injured persons fully recovered (11.1%), while ongoing treatment was rare (0.5%).",
+    },
   },
-  external_walls_of_dwellings: {
-    id: 6,
-    title:
-      "Frequency distribution of respondents by external walls of dwellings",
-    findings: [
-      "Most dwellings had reinforced concrete (37.6%) and bamboo/wood (33.5%) walls.",
-    ],
-    table_data: {
-      headers: ["External wall", "frequency", "percentage"],
-      body: [
-        { x: "Bamboo/ thatch/ wood", frequency: 57, percentage: 33.5 },
-        { x: "Sun-dried brick", frequency: 9, percentage: 5.3 },
-        { x: "Burnt brick /masonry", frequency: 39, percentage: 22.9 },
-        {
-          x: "Reinforced concrete (RC)/modern construction",
-          frequency: 64,
-          percentage: 37.6,
-        },
-        { x: "Other", frequency: 1, percentage: 0.6 },
-      ],
+  F: {
+    deceased: {
+      id: 29,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "No", frequency: 204, percentage: 98.1 },
+          { x: "Yes", frequency: 4, percentage: 1.9 },
+        ],
+      },
+      title: "Frequency distribution of deceased",
+      finding:
+        "Almost all households (98.1%) reported no deaths, with only 1.9% experiencing fatalities.",
     },
-    section: "household socio-economic status",
+    age_of_death: {
+      id: 30,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "10", frequency: 1, percentage: 25 },
+          { x: "46", frequency: 1, percentage: 25 },
+          { x: "53", frequency: 1, percentage: 25 },
+          { x: "54", frequency: 1, percentage: 25 },
+        ],
+      },
+      title: "Frequency distribution of age of death",
+      finding:
+        "Deaths were spread evenly across ages (10, 46, 53, 54), each accounting for 25%.",
+    },
+    gender_of_death: {
+      id: 31,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Male", frequency: 1, percentage: 25 },
+          { x: "Female", frequency: 3, percentage: 75 },
+        ],
+      },
+      title: "Frequency distribution of gender of death",
+      finding: "Most of the deceased were female (75%), compared to 25% male.",
+    },
+    place_of_death: {
+      id: 32,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "On way to hospital", frequency: 1, percentage: 25 },
+          { x: "At hospital", frequency: 2, percentage: 50 },
+          { x: "At home", frequency: 1, percentage: 25 },
+        ],
+      },
+      title: "Frequency distribution of place of death",
+      finding:
+        "Half of the deaths occurred at hospital (50%), while the rest were split between home and en route (25% each).",
+    },
+    cause_of_death: {
+      id: 33,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "collapsed", frequency: 3, percentage: 75 },
+          { x: "trauma", frequency: 1, percentage: 25 },
+        ],
+      },
+      title: "Frequency distribution of cause of death",
+      finding:
+        "Collapsed structures were the leading cause of death (75%), while trauma accounted for 25%.",
+    },
+    certified_death: {
+      id: 34,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Yes", frequency: 3, percentage: 75 },
+          { x: "unknown", frequency: 1, percentage: 25 },
+        ],
+      },
+      title: "Frequency distribution of certified death",
+      finding: "Most deaths were certified (75%), though 25% remained unknown.",
+    },
   },
-  roof_material: {
-    id: 7,
-    title: "Frequency distribution of respondents by roof material",
-    findings: [
-      "Roofs were mainly corrugated metal (40.6%) or concrete slabs/tiled (39.4%), with 20% using thatch/thin metal.",
-    ],
-    table_data: {
-      headers: ["Roof material", "frequency", "percentage"],
-      body: [
-        {
-          x: "Thatch/ corrugated thin metal",
-          frequency: 34,
-          percentage: 20,
-        },
-        {
-          x: "Corrugated metal (properly fixed)",
-          frequency: 69,
-          percentage: 40.6,
-        },
-        {
-          x: "Concrete slab / tiled roof",
-          frequency: 67,
-          percentage: 39.4,
-        },
-      ],
+  G: {
+    training: {
+      id: 35,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [{ x: "No", frequency: 208, percentage: 100 }],
+      },
+      title: "Frequency distribution of training",
+      finding: "None of the respondents (100%) had received disaster training.",
     },
-    section: "household socio-economic status",
+    emergency_plan: {
+      id: 36,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [{ x: "No", frequency: 208, percentage: 100 }],
+      },
+      title: "Frequency distribution of emergency plan",
+      finding: "No households (100%) reported having an emergency plan.",
+    },
+    emergency_kit: {
+      id: 37,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Yes", frequency: 14, percentage: 6.7 },
+          { x: "No", frequency: 194, percentage: 93.3 },
+        ],
+      },
+      title: "Frequency distribution of emergency kit",
+      finding:
+        "Only a small minority (6.7%) had an emergency kit, while 93.3% did not.",
+    },
+    warnings: {
+      id: 38,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Yes", frequency: 3, percentage: 1.4 },
+          { x: "No", frequency: 205, percentage: 98.6 },
+        ],
+      },
+      title: "Frequency distribution of warnings",
+      finding:
+        "Nearly all households (98.6%) received no warnings before the earthquake.",
+    },
+    place_stayed_at_1st_2weeks: {
+      id: 39,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "home", frequency: 11, percentage: 5.3 },
+          { x: "relatives", frequency: 48, percentage: 23.1 },
+          { x: "temporary shelter", frequency: 71, percentage: 34.1 },
+          { x: "camp", frequency: 20, percentage: 9.6 },
+          { x: "outdoor opening area", frequency: 56, percentage: 26.9 },
+          { x: "other", frequency: 2, percentage: 1 },
+        ],
+      },
+      title: "Frequency distribution of place stayed at 1st 2weeks",
+      finding:
+        "Temporary shelters were the most common refuge (34.1%), followed by outdoor open areas (26.9%) and relatives’ homes (23.1%). Very few stayed at home (5.3%) or other places (1%).",
+    },
   },
-  storeys_of_dwellings: {
-    id: 8,
-    title:
-      "Frequency distribution of respondents by number of storeys of dwellings",
-    findings: [
-      "Majority of dwellings were 2-storey (50.6%), while 22.4% had 7 storeys.",
-    ],
-    table_data: {
-      headers: ["No. of storeys of dwellings", "frequency", "percentage"],
-      body: [
-        { x: "1", frequency: 11, percentage: 6.5 },
-        { x: "2", frequency: 86, percentage: 50.6 },
-        { x: "3", frequency: 6, percentage: 3.5 },
-        { x: "4", frequency: 10, percentage: 5.9 },
-        { x: "5", frequency: 5, percentage: 2.9 },
-        { x: "6", frequency: 13, percentage: 7.6 },
-        { x: "7", frequency: 38, percentage: 22.4 },
-        { x: "8", frequency: 1, percentage: 0.6 },
-      ],
+  H: {
+    dwellings_damage: {
+      id: 40,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "fully collapsed", frequency: 30, percentage: 14.5 },
+          { x: "partially collapsed", frequency: 41, percentage: 19.7 },
+          { x: "minor damage", frequency: 115, percentage: 55.3 },
+          { x: "no damage", frequency: 22, percentage: 10.6 },
+        ],
+      },
+      title: "Frequency distribution of dwellings damage",
+      finding:
+        "Minor damage was most common (55.3%), while full collapse affected 14.5% of dwellings.",
     },
-    section: "household socio-economic status",
+    cost_of_damage_to_dwellings: {
+      id: 41,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "≤100", frequency: 203, percentage: 97.6 },
+          { x: ">100", frequency: 5, percentage: 2.4 },
+        ],
+      },
+      title: "Frequency distribution of cost of damage to dwellings",
+      finding:
+        "Nearly all households (97.6%) reported damage costs ≤100 units, with only 2.4% exceeding that.",
+    },
+    assistance: {
+      id: 42,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Yes", frequency: 169, percentage: 81.3 },
+          { x: "No", frequency: 39, percentage: 18.8 },
+        ],
+      },
+      title: "Frequency distribution of assistance",
+      finding:
+        "A large majority (81.3%) received assistance, while 18.8% did not.",
+    },
   },
-  years_built: {
-    id: 9,
-    title: "Frequency distribution of dwellings by years built",
-    findings: [
-      "Most dwellings (85.3%) were built more than 10 years ago, showing older housing stock.",
-    ],
-    table_data: {
-      headers: ["Years built", "frequency", "percentage"],
-      body: [
-        { x: "<10 years", frequency: 25, percentage: 14.7 },
-        { x: "10 years and above", frequency: 145, percentage: 85.3 },
-      ],
+  I: {
+    emotional_state_during_survey: {
+      id: 43,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Calm", frequency: 202, percentage: 97.1 },
+          { x: "Distress", frequency: 6, percentage: 2.9 },
+        ],
+      },
+      title: "Frequency distribution of emotional state during survey",
+      finding:
+        "Most respondents were calm (97.1%), with only 2.9% reporting distress.",
     },
-    section: "household socio-economic status",
+    proxy: {
+      id: 44,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "Yes", frequency: 2, percentage: 1 },
+          { x: "No", frequency: 206, percentage: 99 },
+        ],
+      },
+      title: "Frequency distribution of proxy",
+      finding:
+        "Almost all surveys were self-reported (99%), with only 1% using a proxy.",
+    },
   },
-  ownership_of_dwellings: {
-    id: 10,
-    title: "Frequency distribution of respondents by ownership of dwellings",
-    findings: [
-      "64.1% owned their homes, while 31.8% rented, and 1.2% occupied without formal title.",
-    ],
-    table_data: {
-      headers: ["Ownership", "frequency", "percentage"],
-      body: [
-        { x: "Owned by household", frequency: 109, percentage: 64.1 },
-        { x: "Rented", frequency: 54, percentage: 31.8 },
-        {
-          x: "Occupied without formal title",
-          frequency: 2,
-          percentage: 1.2,
-        },
-        { x: "Other", frequency: 5, percentage: 2.9 },
-      ],
+  J: {
+    suggestions: {
+      id: 45,
+      table_data: {
+        head: ["", "frequency", "percentage"],
+        body: [
+          { x: "strengthening house", frequency: 176, percentage: null },
+          {
+            x: "community drill/education",
+            frequency: 89,
+            percentage: null,
+          },
+          { x: "early warning system", frequency: 129, percentage: null },
+          {
+            x: "relocation from hazardous zone",
+            frequency: 42,
+            percentage: null,
+          },
+          {
+            x: "imporve emergency medical services",
+            frequency: 134,
+            percentage: null,
+          },
+          {
+            x: "finical support/insurance",
+            frequency: 52,
+            percentage: null,
+          },
+        ],
+      },
+      title: "Frequency distribution of suggestions",
+      finding:
+        "Strengthening houses was the most frequent suggestion (176 mentions), followed by improved emergency medical services (134) and early warning systems (129). Relocation (42) and financial support/insurance (52) were less common.",
     },
-    section: "household socio-economic status",
-  },
-  access_to_phone: {
-    id: 11,
-    title: "Frequency distribution of access to phone",
-    findings: [
-      "Nearly universal access to phones (99.4%), with only 0.6% lacking access.",
-    ],
-    table_data: {
-      headers: ["Access to phone", "frequency", "percentage"],
-      body: [
-        { x: "No", frequency: 1, percentage: 0.6 },
-        { x: "Yes", frequency: 169, percentage: 99.4 },
-      ],
-    },
-    section: "household socio-economic status",
-  },
-  access_to_radio: {
-    id: 12,
-    title: "Frequency distribution of access to radio",
-    findings: ["75.9% had access to radio, while 24.1% did not."],
-    table_data: {
-      headers: ["Access to radio", "frequency", "percentage"],
-      body: [
-        { x: "No", frequency: 41, percentage: 24.1 },
-        { x: "Yes", frequency: 129, percentage: 75.9 },
-      ],
-    },
-    section: "household socio-economic status",
-  },
-  gender: {
-    id: 13,
-    title: "Frequency distribution of respondents according to gender",
-    findings: [
-      "Majority of respondents were female (72.4%), with males making up 27.6%.",
-    ],
-    table_data: {
-      headers: ["Gender", "frequency", "percentage"],
-      body: [
-        { x: "Male", frequency: 47, percentage: 27.6 },
-        { x: "Female", frequency: 123, percentage: 72.4 },
-      ],
-    },
-    section: "individual demographic information",
-  },
-  relationship_to_head: {
-    id: 14,
-    title: "Frequency distribution of respondents by relationship to head",
-    findings: [
-      "Respondents were mostly spouses (35.9%) and heads of household (32.9%), followed by children (17.6%).",
-    ],
-    table_data: {
-      headers: ["Relations", "frequency", "percentage"],
-      body: [
-        { x: "Head", frequency: 56, percentage: 32.9 },
-        { x: "Spouse", frequency: 61, percentage: 35.9 },
-        { x: "Children", frequency: 30, percentage: 17.6 },
-        { x: "Parent", frequency: 10, percentage: 5.9 },
-        { x: "Other", frequency: 13, percentage: 7.6 },
-      ],
-    },
-    section: "individual demographic information",
-  },
-  education_levels: {
-    id: 15,
-    title: "Frequency distribution of respondent according to education levels",
-    findings: [
-      "Most respondents had primary (32.4%) and secondary (27.1%) education, while 17.6% had university-level education.",
-    ],
-    table_data: {
-      headers: ["Education levels", "frequency", "percentage"],
-      body: [
-        { x: "No formal education", frequency: 11, percentage: 6.5 },
-        { x: "Primary", frequency: 55, percentage: 32.4 },
-        { x: "Secondary", frequency: 46, percentage: 27.1 },
-        { x: "Higher secondary", frequency: 28, percentage: 16.5 },
-        { x: "University/ tertiary", frequency: 30, percentage: 17.6 },
-      ],
-    },
-    section: "individual demographic information",
-  },
-  occupation_at_time: {
-    id: 16,
-    title: "Frequency distribution of occupation at time of earthquake",
-    findings: [
-      "Majority of respondents (42.4%) were dependents and 25.9% had own business.",
-    ],
-    table_data: {
-      headers: ["Occupation", "frequency", "percentage"],
-      body: [
-        { x: "Aircon repair", frequency: 1, percentage: 0.6 },
-        { x: "Daily labour", frequency: 26, percentage: 15.3 },
-        { x: "Dependent", frequency: 72, percentage: 42.4 },
-        { x: "Driver", frequency: 2, percentage: 1.2 },
-        { x: "Office Staff", frequency: 9, percentage: 5.3 },
-        { x: "Own business", frequency: 44, percentage: 25.9 },
-        { x: "Pensioner", frequency: 1, percentage: 0.6 },
-        { x: "Private employer", frequency: 1, percentage: 0.6 },
-        { x: "Teacher", frequency: 4, percentage: 2.4 },
-        { x: "Student", frequency: 10, percentage: 5.9 },
-      ],
-    },
-    section: "individual demographic information",
-  },
-  place_at_time: {
-    id: 17,
-    title:
-      "Frequency distribution of respondents by place at the time of earthquake",
-    findings: [
-      "Nearly half (45.9%) were inside ground-floor homes, while 25.9% were on upper floors, and 14.1% in public buildings.",
-    ],
-    table_data: {
-      headers: ["Place", "frequency", "percentage"],
-      body: [
-        {
-          x: "Inside home-ground floor",
-          frequency: 78,
-          percentage: 45.9,
-        },
-        { x: "Inside home-upper floor", frequency: 44, percentage: 25.9 },
-        {
-          x: "In structural public buildings",
-          frequency: 24,
-          percentage: 14.1,
-        },
-        {
-          x: "Outside near home (yard, street)",
-          frequency: 20,
-          percentage: 11.8,
-        },
-        { x: "In vehicle", frequency: 2, percentage: 1.2 },
-        { x: "Other", frequency: 2, percentage: 1.2 },
-      ],
-    },
-    section: "exposure circumstances during earthquake",
-  },
-  person_asleep: {
-    id: 18,
-    title: "Frequency distribution of person asleep at the time of earthquake",
-    findings: ["Majority (93.5%) were awake, only 6.5% asleep."],
-    table_data: {
-      headers: ["Person asleep", "frequency", "percentage"],
-      body: [
-        { x: "No", frequency: 159, percentage: 93.5 },
-        { x: "Yes", frequency: 11, percentage: 6.5 },
-      ],
-    },
-    section: "exposure circumstances during earthquake",
-  },
-  attempt_to_evacuate: {
-    id: 19,
-    title:
-      "Frequency distribution of respondents by number of people who attempt to evacuate",
-    findings: ["70.6% attempted evacuation, while 29.4% did not."],
-    table_data: {
-      headers: ["Attempt to evacuate", "frequency", "percentage"],
-      body: [
-        { x: "No", frequency: 50, percentage: 29.4 },
-        { x: "Yes", frequency: 120, percentage: 70.6 },
-      ],
-    },
-    section: "exposure circumstances during earthquake",
-  },
-  time_to_evacuate: {
-    id: 20,
-    title:
-      "Frequency distribution of times from earthquake start to evacuations",
-    findings: [
-      "Most evacuations (78.2%) occurred within 10 minutes of the earthquake.",
-    ],
-    table_data: {
-      headers: ["Time in mins", "frequency", "percentage"],
-      body: [
-        { x: "<10 mins", frequency: 133, percentage: 78.2 },
-        { x: "10 and above", frequency: 37, percentage: 21.8 },
-      ],
-    },
-    section: "exposure circumstances during earthquake",
-  },
-  struck_by_debris: {
-    id: 21,
-    title: "Frequency distribution of person struck by falling debris",
-    findings: ["26.5% were struck by debris, while 73.5% were not."],
-    table_data: {
-      headers: ["Person struck", "frequency", "percentage"],
-      body: [
-        { x: "No", frequency: 125, percentage: 73.5 },
-        { x: "Yes", frequency: 45, percentage: 26.5 },
-      ],
-    },
-    section: "exposure circumstances during earthquake",
-  },
-  injured_members_yes_no: {
-    id: 22,
-    title: "Frequency distribution of injured members",
-    findings: ["28.8% reported injuries, while 71.2% reported none."],
-    table_data: {
-      headers: ["Injured members", "frequency", "percentage"],
-      body: [
-        { x: "No", frequency: 121, percentage: 71.2 },
-        { x: "Yes", frequency: 49, percentage: 28.8 },
-      ],
-    },
-    section: "injury clinical outcome",
-  },
-  nature_of_injury: {
-    id: 23,
-    title: "Frequency distribution of injured members by nature of injury",
-    findings: [
-      "Soft tissue injuries/lacerations were most common (42.9%), followed by crush injuries (24.5%).",
-    ],
-    table_data: {
-      headers: ["Nature of injury", "frequency", "percentage"],
-      body: [
-        { x: "Fracture", frequency: 9, percentage: 18.4 },
-        { x: "Head injury/ concussion", frequency: 6, percentage: 12.2 },
-        {
-          x: "Soft tissue injury/ laceration",
-          frequency: 21,
-          percentage: 42.9,
-        },
-        { x: "Crush injury", frequency: 12, percentage: 24.5 },
-        { x: "Other", frequency: 1, percentage: 2 },
-      ],
-    },
-    section: "injury clinical outcome",
-  },
-  severity_of_injury: {
-    id: 24,
-    title: "Frequency distribution of injured members by severity of injury",
-    findings: [
-      "Injuries ranged from minor (36.7%) to life-threatening/disabling (20.4%), showing diverse severity.",
-    ],
-    table_data: {
-      headers: ["Severity", "frequency", "percentage"],
-      body: [
-        { x: "Minor", frequency: 18, percentage: 36.7 },
-        { x: "Moderate (OPD)", frequency: 10, percentage: 20.4 },
-        { x: "Severe (admission)", frequency: 11, percentage: 22.4 },
-        {
-          x: "Life-threatening/long term disability",
-          frequency: 10,
-          percentage: 20.4,
-        },
-      ],
-    },
-    section: "injury clinical outcome",
-  },
-  place_of_first_treatment: {
-    id: 25,
-    title: "Frequency distribution of places of first treatment",
-    findings: [
-      "Most injured sought hospital care (44.9%), while 24.5% treated themselves at home.",
-    ],
-    table_data: {
-      headers: ["Place", "frequency", "percentage"],
-      body: [
-        { x: "Home/self", frequency: 12, percentage: 24.5 },
-        { x: "PHC", frequency: 7, percentage: 14.3 },
-        { x: "Hospital", frequency: 22, percentage: 44.9 },
-        { x: "Field clinic/ NGO", frequency: 6, percentage: 12.2 },
-        { x: "Other", frequency: 2, percentage: 4.1 },
-      ],
-    },
-    section: "injury clinical outcome",
-  },
-  surgery: {
-    id: 26,
-    title: "Frequency distribution of injured patients who had gone surgery",
-    findings: ["22.4% underwent surgery, while 77.6% did not."],
-    table_data: {
-      headers: ["Surgical intervention", "frequency", "percentage"],
-      body: [
-        { x: "No", frequency: 38, percentage: 77.6 },
-        { x: "Yes", frequency: 11, percentage: 22.4 },
-      ],
-    },
-    section: "injury clinical outcome",
-  },
-  current_status_injured: {
-    id: 27,
-    title:
-      "Frequency distribution of current status of injured persons (at the time of interview)",
-    findings: [
-      "46.9% fully recovered, while 24.5% had died, and 22.4% had partial recovery/disability.",
-    ],
-    table_data: {
-      headers: ["Current status", "frequency", "percentage"],
-      body: [
-        { x: "Fully recovered", frequency: 23, percentage: 46.9 },
-        {
-          x: "Partially recovered/disability",
-          frequency: 11,
-          percentage: 22.4,
-        },
-        { x: "Ongoing treatment", frequency: 3, percentage: 6.1 },
-        { x: "Deceased", frequency: 12, percentage: 24.5 },
-      ],
-    },
-    section: "injury clinical outcome",
-  },
-  deceased_by_age: {
-    id: 28,
-    title: "Frequency distribution of deceased persons by age",
-    findings: [
-      "Majority of deceased were aged 40–64 years (41.9%), followed by 5–39 years (35.5%).",
-    ],
-    table_data: {
-      headers: ["Age", "frequency", "percentage"],
-      body: [
-        { x: "Under 5 years", frequency: 3, percentage: 9.7 },
-        { x: "5-39 years", frequency: 11, percentage: 35.5 },
-        { x: "40-64 years", frequency: 13, percentage: 41.9 },
-        { x: "65 years and above", frequency: 4, percentage: 12.9 },
-      ],
-    },
-    section: "deceased persons",
-  },
-  deceased_by_gender: {
-    id: 29,
-    title: "Frequency distribution of deceased persons by gender",
-    findings: [
-      "Most deceased were female (83.9%), with males accounting for 16.1%.",
-    ],
-    table_data: {
-      headers: ["Gender", "frequency", "percentage"],
-      body: [
-        { x: "Male", frequency: 5, percentage: 16.1 },
-        { x: "Female", frequency: 26, percentage: 83.9 },
-      ],
-    },
-    section: "deceased persons",
-  },
-  place_of_death: {
-    id: 30,
-    title: "Frequency distribution of place of death",
-    findings: ["Nearly all deaths (96.8%) occurred at home."],
-    table_data: {
-      headers: ["Place", "frequency", "percentage"],
-      body: [
-        { x: "At home", frequency: 30, percentage: 96.8 },
-        { x: "Public buildings", frequency: 1, percentage: 3.2 },
-      ],
-    },
-    section: "deceased persons",
-  },
-  cause_of_death: {
-    id: 31,
-    title: "Frequency distribution of cause of death",
-    findings: [
-      "Collapse of structures was the leading cause (87.1%), followed by crushing (12.9%).",
-    ],
-    table_data: {
-      headers: ["Cause", "frequency", "percentage"],
-      body: [
-        { x: "Collapse", frequency: 27, percentage: 87.1 },
-        { x: "Crushing", frequency: 4, percentage: 12.9 },
-      ],
-    },
-    section: "deceased persons",
-  },
-  death_certified: {
-    id: 32,
-    title: "Frequency distribution of death certified",
-    findings: ["All of deceased persons are certified."],
-    table_data: {
-      headers: ["Certified", "frequency", "percentage"],
-      body: [{ x: "Yes", frequency: 31, percentage: 100 }],
-    },
-    section: "deceased persons",
-  },
-  earthquake_training: {
-    id: 33,
-    title:
-      "Frequency distribution of household participated in earthquake training",
-    findings: [
-      "None of the households (100%) had participated in earthquake training.",
-    ],
-    table_data: {
-      headers: ["Earthquake training", "frequency", "percentage"],
-      body: [{ x: "No", frequency: 170, percentage: 100 }],
-    },
-    section: "household preparedness response",
-  },
-  emergency_plan: {
-    id: 34,
-    title: "Frequency distribution of household having emergency plan",
-    findings: ["No households (100%) reported having an emergency plan."],
-    table_data: {
-      headers: ["Emergency plan", "frequency", "percentage"],
-      body: [{ x: "No", frequency: 170, percentage: 100 }],
-    },
-    section: "household preparedness response",
-  },
-  emergency_kit: {
-    id: 35,
-    title: "Frequency distribution of household having emergency kit",
-    findings: ["No households (100%) had emergency kits."],
-    table_data: {
-      headers: ["Emergency kit", "frequency", "percentage"],
-      body: [{ x: "No", frequency: 170, percentage: 100 }],
-    },
-    section: "household preparedness response",
-  },
-  early_warnings: {
-    id: 36,
-    title: "Frequency distribution of household receiving early warnings",
-    findings: ["No households (100%) received early warnings."],
-    table_data: {
-      headers: ["Receiving early warnings", "frequency", "percentage"],
-      body: [{ x: "No", frequency: 170, percentage: 100 }],
-    },
-    section: "household preparedness response",
-  },
-  place_stayed_first_2_weeks: {
-    id: 37,
-    title: "Frequency distribution of place stayed first 2 weeks",
-    findings: [
-      "Majority stayed in temporary shelters (30%) or camps (22.9%), while 20% stayed outdoors.",
-    ],
-    table_data: {
-      headers: ["Place", "frequency", "percentage"],
-      body: [
-        { x: "Home", frequency: 22, percentage: 12.9 },
-        { x: "Relative/Friends", frequency: 18, percentage: 10.6 },
-        { x: "Temporary shelter", frequency: 51, percentage: 30 },
-        { x: "Camp", frequency: 39, percentage: 22.9 },
-        { x: "Outdoors", frequency: 34, percentage: 20 },
-        { x: "Other/open area", frequency: 6, percentage: 3.5 },
-      ],
-    },
-    section: "household preparedness response",
-  },
-  dwellings_collapsed: {
-    id: 38,
-    title: "Frequency distribution of dwellings collapsed",
-    findings: [
-      "35.9% of dwellings fully collapsed, 20.6% partially collapsed, while 32.9% had minor damage.",
-    ],
-    table_data: {
-      headers: ["Dwellings collapsed", "frequency", "percentage"],
-      body: [
-        { x: "Fully collapsed", frequency: 61, percentage: 35.9 },
-        { x: "Partially collapsed", frequency: 35, percentage: 20.6 },
-        { x: "Minor damage", frequency: 56, percentage: 32.9 },
-        { x: "No damage", frequency: 18, percentage: 10.6 },
-      ],
-    },
-    section: "perception suggestions",
-  },
-  estimated_cost_damage: {
-    id: 39,
-    title: "Frequency distribution of estimated cost of damage (lakh)",
-    findings: [
-      "Half (50.6%) reported damages under 10 lakh, while 25.9% had damages between 100–1000 lakh.",
-    ],
-    table_data: {
-      headers: ["Estimated cost", "frequency", "percentage"],
-      body: [
-        { x: "<10 lakh", frequency: 86, percentage: 50.6 },
-        { x: "10 to 100 lakh", frequency: 38, percentage: 22.4 },
-        {
-          x: "Between 100 to 1000 lakh",
-          frequency: 44,
-          percentage: 25.9,
-        },
-        { x: ">1000 lakh", frequency: 2, percentage: 1.2 },
-      ],
-    },
-    section: "perception suggestions",
-  },
-  loss_of_income: {
-    id: 40,
-    title: "Frequency distribution of loss of income (percentage)",
-    findings: [
-      "38.8% lost 80% or more of income, while 30.6% lost between 50–79%.",
-    ],
-    table_data: {
-      headers: ["Percent reduction", "frequency", "percentage"],
-      body: [
-        { x: "<10", frequency: 15, percentage: 8.8 },
-        { x: "10 to 49", frequency: 37, percentage: 21.8 },
-        { x: "50 to 79", frequency: 52, percentage: 30.6 },
-        { x: "80 and above", frequency: 66, percentage: 38.8 },
-      ],
-    },
-    section: "perception suggestions",
-  },
-  assistance_received: {
-    id: 41,
-    title: "Frequency distribution of assistance received",
-    findings: ["Nearly all respondents (98.2%) received assistance."],
-    table_data: {
-      headers: ["Assistance received", "frequency", "percentage"],
-      body: [
-        { x: "No", frequency: 3, percentage: 1.8 },
-        { x: "Yes", frequency: 167, percentage: 98.2 },
-      ],
-    },
-    section: "perception suggestions",
-  },
-  type_of_assistance: {
-    id: 42,
-    title: "Frequency distribution of type of assistance",
-    findings: [
-      "Food (90.6%), cash (81.2%), medical (80.6%), and shelter materials (80%) were the main forms of aid.",
-    ],
-    table_data: {
-      headers: ["Type of assistance", "frequency", "percentage"],
-      body: [
-        { x: "Food", frequency: 154, percentage: 90.6 },
-        { x: "Shelter materials", frequency: 136, percentage: 80 },
-        { x: "Cash", frequency: 138, percentage: 81.2 },
-        { x: "Medical", frequency: 137, percentage: 80.6 },
-      ],
-    },
-    section: "perception suggestions",
-  },
-  main_reason: {
-    id: 43,
-    title: "Frequency distribution of main reason in the interviewer view",
-    findings: ["Causes were equally attributed to natural disaster (50%)."],
-    table_data: {
-      headers: ["Main reason", "frequency", "percentage"],
-      body: [{ x: "Natural disaster", frequency: 85, percentage: 50 }],
-    },
-    section: "damage economic impact",
-  },
-  suggestions_by_interviewers: {
-    id: 44,
-    title: "Frequency distribution of suggestions by interviewers",
-    findings: [
-      "88.2% of interviewers suggest to strengthen the house and 70.6% suggest for early warning system.",
-    ],
-    table_data: {
-      headers: ["Suggestions", "frequency", "percentage"],
-      body: [
-        {
-          x: "Strengthen houses/ retrofitting",
-          frequency: 150,
-          percentage: 88.2,
-        },
-        {
-          x: "Community drills/ education",
-          frequency: 85,
-          percentage: 50,
-        },
-        { x: "Early warning systems", frequency: 120, percentage: 70.6 },
-        {
-          x: "Relocation from hazardous zone",
-          frequency: 45,
-          percentage: 26.5,
-        },
-        {
-          x: "Improved emergency medical services",
-          frequency: 68,
-          percentage: 40,
-        },
-        {
-          x: "Financial support / insurance",
-          frequency: 41,
-          percentage: 24.1,
-        },
-      ],
-    },
-    section: "damage economic impact",
-  },
-  emotional_state: {
-    id: 45,
-    title: "Frequency distribution of type of emotional state",
-    findings: [
-      "Majority (95.9%) reported being calm, while 4.1% were distressed.",
-    ],
-    table_data: {
-      headers: ["Emotional state", "frequency", "percentage"],
-      body: [
-        { x: "Calm", frequency: 163, percentage: 95.9 },
-        { x: "Distressed", frequency: 7, percentage: 4.1 },
-      ],
-    },
-    section: "interviewer observations",
-  },
-  proxy_of_respondents: {
-    id: 46,
-    title: "Frequency distribution of proxy of respondents",
-    findings: [
-      "85.3% of respondents answered directly, while 14.7% responded through a proxy.",
-    ],
-    table_data: {
-      headers: ["Proxy", "frequency", "percentage"],
-      body: [
-        { x: "No", frequency: 145, percentage: 85.3 },
-        { x: "Yes", frequency: 25, percentage: 14.7 },
-      ],
-    },
-    section: "interviewer observations",
-  },
-  injured_members_within_walls: {
-    id: 47,
-    title: "Association between injured members and walls of dwellings",
-    findings: [
-      "There is an association between injured members and walls of dwellings",
-    ],
-    p_value: 0.043,
-    table_data: {
-      headers: ["External wall", "Injured (%)", "Not injured (%)"],
-      body: [
-        { x: "Bamboo/ thatch/ wood", frequency: 15, percentage: 42 },
-        { x: "Sun-dried brick", frequency: 6, percentage: 3 },
-        { x: "Burnt brick /masonry", frequency: 7, percentage: 32 },
-        {
-          x: "Reinforced concrete (RC)/modern construction",
-          frequency: 21,
-          percentage: 43,
-        },
-        { x: "Other", frequency: 0, percentage: 1 },
-      ],
-    },
-    section: "association between injured members and other conditions",
-  },
-  injured_members_within_roof: {
-    id: 48,
-    title: "Association between injured members and roof material",
-    findings: [
-      "There is an association between injured members and roof material",
-    ],
-    p_value: 0.004,
-    table_data: {
-      headers: ["Roof material", "Injured (%)", "Not injured (%)"],
-      body: [
-        {
-          x: "Thatch/ corrugated thin metal",
-          frequency: 7,
-          percentage: 27,
-        },
-        {
-          x: "Corrugated metal (properly fixed)",
-          frequency: 13,
-          percentage: 56,
-        },
-        { x: "Concrete slab / tiled roof", frequency: 29, percentage: 38 },
-      ],
-    },
-    section: "association between injured members and other conditions",
-  },
-  injured_members_by_ownership: {
-    id: 49,
-    title: "Association between injured members and ownership of dwellings",
-    findings: [
-      "There is an association between injured members and ownership of dwellings",
-    ],
-    p_value: 0.038,
-    table_data: {
-      headers: ["Ownership", "Injured (%)", "Not injured (%)"],
-      body: [
-        { x: "Owned by household", frequency: 26, percentage: 83 },
-        { x: "Rented", frequency: 20, percentage: 34 },
-        {
-          x: "Occupied without formal title",
-          frequency: 2,
-          percentage: 0,
-        },
-        { x: "Other", frequency: 1, percentage: 4 },
-      ],
-    },
-    section: "association between injured members and other conditions",
-  },
-  injured_members_struck_by_debris: {
-    id: 50,
-    title: "Association between injured members struck and falling debris",
-    findings: [
-      "There is an association between injured members and struck by falling debris",
-    ],
-    p_value: 0,
-    table_data: {
-      headers: ["Person struck", "Injured (%)", "Not injured (%)"],
-      body: [
-        { x: "No", frequency: 18, percentage: 107 },
-        { x: "Yes", frequency: 31, percentage: 14 },
-      ],
-    },
-    section: "association between injured members and other conditions",
   },
 };

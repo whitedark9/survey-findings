@@ -6,7 +6,7 @@ export function calculateTotalValues(table_data: TableData) {
 
   table_data.body.map((e) => {
     totalFrequency += e.frequency; // index 2 is frequency
-    totalPercentage += e.percentage; // index 3 is percentage;
+    totalPercentage = e.percentage ?? 0; // index 3 is percentage;
   });
 
   return {

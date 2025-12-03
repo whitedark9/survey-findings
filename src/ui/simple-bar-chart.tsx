@@ -9,7 +9,6 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { useDevice } from "~/components/hooks/useDevice";
 import { ReChartData } from "~/constants/types/data";
 
 const COLORS = [
@@ -26,14 +25,13 @@ const COLORS = [
 ];
 
 export default function SimpleBarChart({ data }: { data: ReChartData[] }) {
-  const { isDesktop } = useDevice();
-
   return (
     <BarChart
-      className="mx-auto w-full text-2xl"
+      className="mx-auto w-full"
       style={{
+        fontSize: 22,
         aspectRatio: 1,
-        maxWidth: isDesktop ? "50vw" : "100%",
+        maxWidth: "50vw",
         height: "88vh",
       }}
       responsive
@@ -47,7 +45,7 @@ export default function SimpleBarChart({ data }: { data: ReChartData[] }) {
         angle={-45}
         textAnchor="end"
       />
-      <YAxis dataKey={"frequency"} width={isDesktop ? 200 : 60} />
+      <YAxis dataKey={"frequency"} width={200} />
       <Tooltip />
       <Bar
         dataKey="frequency"

@@ -1,9 +1,14 @@
-import { data } from "~/constants/data";
-import TableWithTitle from "~/ui/table-with-title";
+---
+title: Survey Findings Tables
+---
 
-# Survey Finding Tables
+import { DATA } from "~/constants/data";
+import SurveyFindings from "~/ui/survey-findings";
 
-{Object.keys(data).map((key, index)=> {
+{Object.keys(DATA).map((key)=> {
+
 return (
 
-<TableWithTitle key={key} data={data[key]} index={index} />) })}
+<SurveyFindings data={DATA[key]} key={key} section={key} />
+
+) })}

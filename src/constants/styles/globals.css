@@ -34,13 +34,13 @@ strong {
   @apply font-bold text-blue-600 dark:text-blue-700;
 }
 
-thead {
+/* thead {
   @apply bg-blue-700 font-bold text-white dark:bg-blue-950 dark:text-neutral-100;
-}
+} */
 
-tr {
+/* tr {
   @apply even:!bg-blue-300/25 even:dark:!bg-blue-950/25;
-}
+} */
 
 th,
 td {
